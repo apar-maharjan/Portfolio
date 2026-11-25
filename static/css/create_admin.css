@@ -1,0 +1,259 @@
+/* =========================
+   ADMIN PAGE
+========================= */
+
+.admin-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5EEE5;
+}
+
+
+/* =========================
+   ADMIN CARD
+========================= */
+
+.admin-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 45px 45px;
+    background-color: #FFFCF7;
+    border: 1px solid #E5DDD2;
+    border-radius: 22px;
+    box-shadow: 0 15px 45px rgba(37, 43, 37, 0.07);
+    text-align: center;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.admin-card .logo {
+    display: inline-block;
+    font-family: Georgia, serif;
+    font-size: 29px;
+    font-style: italic;
+    font-weight: bold;
+    color: #252B25;
+    margin-bottom: 35px;
+}
+
+.admin-card .logo span {
+    color: #789A84;
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.admin-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E5EDE3;
+    color: #789A84;
+    border-radius: 16px;
+    font-size: 27px;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.admin-label {
+    color: #789A84;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.admin-card h1 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: normal;
+    color: #252B25;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.admin-card h1 span {
+    color: #789A84;
+    font-style: italic;
+}
+
+.admin-description {
+    max-width: 340px;
+    margin: 0 auto 35px;
+    color: #77786F;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.admin-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+.form-group label {
+    display: block;
+    color: #343A32;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 16px 17px;
+    border: 1px solid #DED8CE;
+    border-radius: 10px;
+    background-color: #F9F6F0;
+    color: #252B25;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input::placeholder {
+    color: #AAA99F;
+}
+
+.form-group input:focus {
+    border-color: #789A84;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(120, 154, 132, 0.12);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 9px;
+    color: #898A80;
+    font-size: 11px;
+}
+
+
+/* =========================
+   CREATE BUTTON
+========================= */
+
+.create-button {
+    width: 100%;
+    padding: 17px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 35px;
+    background-color: #252B25;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.create-button span {
+    margin-left: 10px;
+}
+
+.create-button:hover {
+    background-color: #789A84;
+    transform: translateY(-3px);
+}
+
+.create-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   SECURITY NOTE
+========================= */
+
+.security-note {
+    margin-top: 28px;
+    color: #77786F;
+    font-size: 12px;
+}
+
+.security-note span {
+    color: #789A84;
+    font-size: 10px;
+    margin-right: 7px;
+}
+
+
+/* =========================
+   BACK LINK
+========================= */
+
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #789A84;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: #252B25;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.admin-footer {
+    margin-top: 30px;
+    color: #898A80;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 500px) {
+
+    .admin-page {
+        padding: 25px 15px;
+    }
+
+    .admin-card {
+        padding: 35px 23px;
+    }
+
+    .admin-card h1 {
+        font-size: 32px;
+    }
+
+    .admin-card .logo {
+        font-size: 26px;
+    }
+
+    .admin-description {
+        font-size: 13px;
+    }
+
+}

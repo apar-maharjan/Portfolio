@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Me | User</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="top">
+
+        <a href="{{ url_for('home') }}" class="logo">
+            User<span>.</span>
+        </a>
+
+        <nav class="menu">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}" class="active">About Me</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+
+        <a href="{{ url_for('contact') }}" class="nav-button">
+            Let's Talk <span>↗</span>
+        </a>
+
+    </header>
+
+
+    <main>
+
+        <!-- About Hero -->
+        <section class="about-hero">
+
+            <div class="about-heading">
+
+                <p class="section-label">
+                    GET TO KNOW ME
+                </p>
+
+                <h1>
+                    The person<br>
+                    behind <span>the code.</span>
+                </h1>
+
+                <p class="about-intro">
+                    I'm User, a curious mind driven by
+                    technology, creativity and the desire to
+                    continuously learn. I enjoy exploring ideas,
+                    solving problems and turning thoughts into
+                    something real.
+                </p>
+
+                <a href="{{ url_for('contact') }}" class="about-button">
+                    Let's Connect ↗
+                </a>
+
+            </div>
+
+            <div class="hero-image-container">
+
+                <div class="image-background"></div>
+
+                <img
+                    src="{{ url_for('static', filename='images/myprofile.png') }}"
+                    alt="profile"
+                    class="profile-image"
+                >
+
+                <div class="image-label">
+                    <p>Ideas Into Innovation.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Personal Story -->
+        <section class="story-section">
+
+            <div class="section-heading">
+                <span>01 / MY STORY</span>
+                <h2>More than just code.</h2>
+            </div>
+
+            <div class="story-content">
+
+                <p>
+                    I'm someone who loves technology, creativity,
+                    music and exploring new ideas. I write code in
+                    Python, explore the world of Artificial
+                    Intelligence and Machine Learning, and enjoy
+                    turning ideas into something meaningful.
+                </p>
+
+                <p>
+                    I believe in doing more and saying less.
+                    Rather than making big promises, I prefer to
+                    put in the work and let the results speak.
+                </p>
+
+                <p>
+                    Outside technology, I enjoy playing guitar,
+                    making art, watching great movies and anime,
+                    and playing football.
+                </p>
+
+                <p>
+                    I'm still learning, still exploring, and
+                    still figuring things out. And honestly,
+                    that's what makes the journey interesting.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Education -->
+        <section class="education-section">
+
+            <div class="section-heading">
+                <span>02 / EDUCATION</span>
+                <h2>My academic journey.</h2>
+                <p>
+                    Every step in my education has been part
+                    of the person I'm becoming today.
+                </p>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker"></div>
+
+                    <div class="timeline-content">
+                        <span>SECONDARY EDUCATION</span>
+
+                        <h3>ABC School</h3>
+
+                        <p>
+                            Completed my schooling up to Grade 10,
+                            where my academic journey began.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker"></div>
+
+                    <div class="timeline-content">
+                        <span>HIGHER SECONDARY EDUCATION</span>
+
+                        <h3>XYZ College</h3>
+
+                        <p>
+                            Pursued my +2 studies and continued
+                            exploring my interests while building
+                            my academic foundation.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-marker"></div>
+
+                    <div class="timeline-content">
+                        <span>UNDERGRADUATE STUDIES</span>
+
+                        <h3>DEF COLLEGE</h3>
+
+                        <p>
+                            Currently pursuing a Bachelor of
+                            Computer Applications (BCA), developing
+                            my understanding of computing,
+                            programming and technology.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Technology -->
+        <section class="interest-section">
+
+            <div class="section-heading">
+                <span>03 / TECHNOLOGY</span>
+                <h2>Things that keep me curious.</h2>
+
+                <p>
+                    Areas of technology I enjoy exploring
+                    and learning more about.
+                </p>
+            </div>
+
+
+            <div class="interest-grid">
+
+                <article class="interest-card">
+
+                    <span class="card-number">01</span>
+
+                    <h3>Python Development</h3>
+
+                    <p>
+                        Python is my primary programming language.
+                        I enjoy writing code, solving problems,
+                        experimenting with ideas and developing
+                        useful applications.
+                    </p>
+
+                </article>
+
+
+                <article class="interest-card">
+
+                    <span class="card-number">02</span>
+
+                    <h3>Artificial Intelligence & ML</h3>
+
+                    <p>
+                        I'm fascinated by how machines learn,
+                        recognize patterns, understand information
+                        and solve problems.
+                    </p>
+
+                </article>
+
+
+                <article class="interest-card">
+
+                    <span class="card-number">03</span>
+
+                    <h3>Cybersecurity</h3>
+
+                    <p>
+                        Understanding digital security,
+                        exploring vulnerabilities and learning
+                        how systems can be protected interests me.
+                    </p>
+
+                </article>
+
+
+                <article class="interest-card">
+
+                    <span class="card-number">04</span>
+
+                    <h3>Data & Analytics</h3>
+
+                    <p>
+                        I enjoy exploring data, finding patterns
+                        and discovering how raw information can
+                        become meaningful insights.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Beyond Technology -->
+        <section class="personal-section">
+
+            <div class="personal-heading">
+
+                <span>04 / BEYOND TECHNOLOGY</span>
+
+                <h2>
+                    A little bit of
+                    <span>everything.</span>
+                </h2>
+
+                <p>
+                    Technology is a big part of my life,
+                    but it isn't the only thing that defines me.
+                    I enjoy creativity, entertainment and
+                    experiences outside the digital world.
+                </p>
+
+            </div>
+
+
+            <div class="hobby-grid">
+
+                <div class="hobby-item">
+                    <span>♪</span>
+                    <h3>Music & Guitar</h3>
+                    <p>Enjoying music and playing guitar.</p>
+                </div>
+
+                <div class="hobby-item">
+                    <span>✎</span>
+                    <h3>Art & Creativity</h3>
+                    <p>Expressing ideas through art and creativity.</p>
+                </div>
+
+                <div class="hobby-item">
+                    <span>▶</span>
+                    <h3>Movies & Anime</h3>
+                    <p>Enjoying great stories and visual experiences.</p>
+                </div>
+
+                <div class="hobby-item">
+                    <span>⚽</span>
+                    <h3>Football</h3>
+                    <p>Enjoying the game and staying active.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Personality -->
+        <section class="personality-section">
+
+            <div class="section-heading">
+                <span>05 / PERSONALITY</span>
+                <h2>A few things about me.</h2>
+            </div>
+
+            <div class="personality-list">
+
+                <div>
+                    <h3>Quiet, but observant.</h3>
+                    <p>
+                        I enjoy observing, learning and
+                        understanding the world around me.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>A lifelong learner.</h3>
+                    <p>
+                        I like exploring unfamiliar topics
+                        and gaining new skills.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>A creator at heart.</h3>
+                    <p>
+                        I enjoy taking ideas and turning
+                        them into something tangible.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Always curious.</h3>
+                    <p>
+                        I often wonder how things work
+                        and how they could be improved.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Helpful by nature.</h3>
+                    <p>
+                        I enjoy helping people whenever
+                        I can.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Action-oriented.</h3>
+                    <p>
+                        I believe consistent effort and
+                        actual results matter more than
+                        empty promises.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Final CTA -->
+        <section class="about-cta">
+
+            <p>THANK YOU FOR GETTING TO KNOW ME</p>
+
+            <h2>
+                Have something<br>
+                <span>in mind?</span>
+            </h2>
+
+            <a href="{{ url_for('contact') }}">
+                Let's Talk ↗
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>© 2026 User. All rights reserved.</p>
+
+        <div class="footer-socials">
+
+             <a href="#">
+                GitHub ↗
+            </a>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

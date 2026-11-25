@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | User</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <div class="login-card">
+
+            <!-- Logo -->
+            <a href="{{ url_for('home') }}" class="logo">
+                User<span>.</span>
+            </a>
+
+            <!-- Icon -->
+            <div class="login-icon">
+                ♙
+            </div>
+
+            <!-- Heading -->
+            <p class="login-label">ADMINISTRATION</p>
+
+            <h1>Welcome <span>Back.</span></h1>
+
+            <p class="login-description">
+                Sign in to access your admin dashboard
+                and manage your website.
+            </p>
+
+
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+
+            <!-- Login Form -->
+            <form method="POST" class="login-form">
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+
+                <button type="submit" class="login-button">
+                    Login to Dashboard <span>↗</span>
+                </button>
+
+            </form>
+
+
+            <!-- Security Note -->
+            <div class="security-note">
+                <span>●</span>
+                Secure administrator access
+            </div>
+
+
+            <!-- Back Link -->
+            <a href="{{ url_for('home') }}" class="back-link">
+                ← Back to Home
+            </a>
+
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="login-footer">
+            © 2026 User. All rights reserved.
+        </footer>
+
+    </main>
+
+</body>
+</html>

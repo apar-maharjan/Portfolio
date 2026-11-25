@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | User</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+</head>
+
+<body>
+
+    <!-- Dashboard Header -->
+    <header class="dashboard-header">
+
+        <a href="{{ url_for('home') }}" class="logo">
+            User<span>.</span>
+        </a>
+
+        <div class="header-right">
+            <span class="admin-badge">Administrator</span>
+
+            <form action="{{ url_for('logout') }}" method="POST">
+                <button type="submit" class="logout-button">
+                    Logout <span>↗</span>
+                </button>
+            </form>
+        </div>
+
+    </header>
+
+
+    <main class="dashboard">
+
+        <!-- Dashboard Introduction -->
+        <section class="dashboard-intro">
+
+            <div>
+                <p class="dashboard-label">ADMINISTRATION PANEL</p>
+
+                <h1>Contact <span>Messages.</span></h1>
+
+                <p class="dashboard-description">
+                    Manage and review messages submitted through your portfolio website.
+                </p>
+            </div>
+
+            <div class="message-count">
+                <h2>{{ messages|length }}</h2>
+                <p>Total Messages</p>
+            </div>
+
+        </section>
+
+
+        <!-- Messages Section -->
+        <section class="messages-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Recent Messages</h2>
+                    <p>Messages received from your visitors.</p>
+                </div>
+
+                <span class="message-tag">
+                    {{ messages|length }} Messages
+                </span>
+            </div>
+
+
+            <!-- Message Cards -->
+            <div class="messages-container">
+
+                {% for msg in messages %}
+
+                    <article class="message-card">
+
+                        <div class="message-top">
+
+                            <div class="sender-info">
+                                <div class="sender-avatar">
+                                    {{ msg.fullname[0]|upper }}
+                                </div>
+
+                                <div>
+                                    <h3>{{ msg.fullname }}</h3>
+                                    <p>{{ msg.email }}</p>
+                                </div>
+                            </div>
+
+                            <span class="message-status">
+                                New Message
+                            </span>
+
+                        </div>
+
+
+                        <div class="message-content">
+
+                            <p class="subject-label">SUBJECT</p>
+
+                            <h4>{{ msg.subject }}</h4>
+
+                            <p class="message-text">
+                                {{ msg.message }}
+                            </p>
+
+                        </div>
+
+
+                        <div class="message-footer">
+
+                            <span>✉ Received through contact form</span>
+
+                            <a href="mailto:{{ msg.email }}?subject=Re: {{ msg.subject|urlencode }}"
+                               class="reply-button">
+                                Reply ↗
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                {% else %}
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            ✉
+                        </div>
+
+                        <h3>No Messages Yet</h3>
+
+                        <p>
+                            You haven't received any contact form submissions yet.
+                            New messages will appear here.
+                        </p>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+
+        <p>© 2026 User. All rights reserved.</p>
+
+        <a href="{{ url_for('home') }}">
+            Visit Website ↗
+        </a>
+
+    </footer>
+
+</body>
+</html>

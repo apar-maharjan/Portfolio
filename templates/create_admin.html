@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Admin Account | User</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/create_admin.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+</head>
+
+<body>
+
+    <main class="admin-page">
+
+        <div class="admin-card">
+
+            <a href="{{ url_for('home') }}" class="logo">
+                User<span>.</span>
+            </a>
+
+            <div class="admin-icon">
+                ✦
+            </div>
+
+            <p class="admin-label">ADMINISTRATION</p>
+
+            <h1>Create Admin <span>Account.</span></h1>
+
+            <p class="admin-description">
+                Set up your administrator account to securely manage
+                your portfolio and website content.
+            </p>
+
+            <form method="POST" class="admin-form">
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a strong password"
+                        minlength="12"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                    <small>Use at least 12 characters for better security.</small>
+                </div>
+
+                <button type="submit" class="create-button">
+                    Create Account <span>↗</span>
+                </button>
+
+            </form>
+
+            <div class="security-note">
+                <span>●</span>
+                Secure administrator registration
+            </div>
+
+            <a href="{{ url_for('home') }}" class="back-link">
+                ← Back to Home
+            </a>
+
+        </div>
+
+        <footer class="admin-footer">
+            © 2026 User. All rights reserved.
+        </footer>
+
+    </main>
+
+</body>
+</html>
